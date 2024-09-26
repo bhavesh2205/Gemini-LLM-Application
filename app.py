@@ -13,7 +13,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 #Function to load Gemini model and get response.
 def get_gemini_response(input_text, image=None):
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel("gemini-1.5-flash")
     if input_text and image:
         response = model.generate_content([input_text, image])
     elif input_text:
@@ -21,6 +21,7 @@ def get_gemini_response(input_text, image=None):
     else:
         response = model.generate_content([image])
     return response.text
+
 
 #Initialize Streamlit app
 st.set_page_config(page_title="generatetext")
