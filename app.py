@@ -32,7 +32,7 @@ tab1, tab2 = st.tabs(["Text", "Text & Image"])
 #Tab 1: text
 with tab1:
     st.header("Gemini AI")
-    input_text = st.text_input("Type something:", key="text_input")
+    input_text = st.text_input("Ask something:", key="text_input")
     
     if st.button("Generate", key="text_response"):
         if input_text:
@@ -45,8 +45,8 @@ with tab1:
 #Tab 2: Text and Image
 with tab2:
     st.header("Gemini AI")
-    input_text = st.text_input("Type something:", key="text_and_image_input")
-    uploaded_file = st.file_uploader("upload an image...", type=["jpg", "jpeg", "png"])
+    input_text = st.text_input("Ask something:", key="text_and_image_input")
+    uploaded_file = st.file_uploader("Upload an image...", type=["jpg", "jpeg", "png"])
     
     image = None
     if uploaded_file is not None:
